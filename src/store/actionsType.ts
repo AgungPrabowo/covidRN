@@ -6,6 +6,5 @@ export enum ActionsType {
 }
 
 export interface IAction<T> extends Action {
-  payload: T,
-  loading: Boolean
+  payload: T
 }

@@ -10,6 +10,7 @@ target 'covidRN' do
 
   pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
+
   target 'covidRNTests' do
     inherit! :complete
     # Pods for testing

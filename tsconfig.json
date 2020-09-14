@@ -30,5 +30,5 @@
     "babel.config.ts",
     "metro.config.ts",
     "jest.config.tsx"
-  ]
+  ],
 }

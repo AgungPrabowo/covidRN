@@ -5688,6 +5688,11 @@ react-native-elements@^2.3.2:
     react-native-ratings "^7.2.0"
     react-native-status-bar-height "^2.5.0"
 
+react-native-flags-typescript@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-flags-typescript/-/react-native-flags-typescript-1.0.1.tgz#7c0f64b41f2af1328e4e96faa7149154cc64b32c"
+  integrity sha512-yIGgOPLM6bmCMRKQgB4evMRCf94LSMcOz7J6qaQuhUdy6p/K8zurBcic4ck3UqFD7NucjYMweY5Hb/I0xNDTXA==
+
 react-native-gesture-handler@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.8.0.tgz#18f61f51da50320f938957b0ee79bc58f47449dc"

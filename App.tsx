@@ -1,7 +1,7 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "@components/HomeScreen";
-import SettingsScreen from "@components/SettingScreen";
+import RegionScreen from "@components/RegionScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { store } from "@store/store";
@@ -20,17 +20,17 @@ function MyTabs() {
                 <Icon name="earth" size={30} color={color} />
               ),
             }}
-            name="Home"
+            name="Total Stats"
             component={HomeScreen}
           />
           <Tab.Screen
-            name="Settings"
+            name="Region Stats"
             options={{
               tabBarIcon: ({ color }) => (
                 <Icon name="flag" size={30} color={color} />
               ),
             }}
-            component={SettingsScreen}
+            component={RegionScreen}
           />
           <Tab.Screen
             name="COVID Map"
@@ -39,7 +39,7 @@ function MyTabs() {
                 <Icon name="map" size={30} color={color} />
               ),
             }}
-            component={SettingsScreen}
+            component={RegionScreen}
           />
         </Tab.Navigator>
       </NavigationContainer>

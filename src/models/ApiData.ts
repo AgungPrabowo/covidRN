@@ -28,6 +28,12 @@ export interface Global {
   TotalRecovered: number;
 }
 
+export interface IReport {
+  title: string;
+  icon: string;
+  count?: number;
+}
+
 export class Convert {
   public static toSummary(json: string): Summary {
     return JSON.parse(json);
