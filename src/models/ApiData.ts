@@ -1,4 +1,4 @@
-export interface Summary {
+export interface Summary extends Map {
   Message: string;
   Global: Global;
   Countries: Country[];
@@ -34,6 +34,25 @@ export interface IReport {
   count?: number;
 }
 
+export interface Map {
+  success: boolean;
+  message: Message[];
+  Loading: boolean;
+}
+
+export interface Message {
+  county_name: string;
+  state_name: string;
+  confirmed: number;
+  new: number;
+  death: number;
+  new_death: number;
+  fatality_rate: string;
+  latitude: number;
+  longitude: number;
+  last_update: string;
+}
+
 export class Convert {
   public static toSummary(json: string): Summary {
     return JSON.parse(json);
@@ -51,25 +70,23 @@ export class Convert {
         NewRecovered: 0,
         TotalRecovered: 0,
       },
-      Countries: [
-        {
-          Country: "",
-          CountryCode: "",
-          Slug: "",
-          NewConfirmed: 0,
-          TotalConfirmed: 0,
-          NewDeaths: 0,
-          TotalDeaths: 0,
-          NewRecovered: 0,
-          TotalRecovered: 0,
-          Date: ""
-        }
-      ],
-      Date: ""
+      Countries: [],
+      Date: "",
+      success: false,
+      message: [],
     }
   }
 
   public static summaryToJson(value: Summary): string {
     return JSON.stringify(value);
   }
+
+  public static toMap(json: string): Map {
+    return JSON.parse(json);
+  }
+
+  public static mapToJson(value: Map): string {
+    return JSON.stringify(value);
+  }
+
 }

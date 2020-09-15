@@ -1,6 +1,7 @@
-export const casesByCountry = async () => {
+export const casesByCountry = async (isSummary: boolean) => {
   try {
-    const res: Response = await fetch("https://api.covid19api.com/summary");
+    const endpoint: string = isSummary ? "https://api.covid19api.com/summary" : "https://covid19-us-api.herokuapp.com/county";
+    const res: Response = await fetch(endpoint);
     const resJson: object = res.json();
     return resJson;
   } catch (err) {

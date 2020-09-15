@@ -1,14 +1,14 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React, { useState } from "react";
-import { ListItem, BottomSheet } from "react-native-elements";
+import { ModalProps, Text } from "react-native";
+import { BottomSheet, ListItem } from "react-native-elements";
+import Flag from "react-native-flags-typescript";
 import { ScrollView, TouchableHighlight } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useSelector } from "react-redux";
-import { Summary, Country, Convert, IReport } from "../models/ApiData";
-import Loading from "./Loading";
-import Flag from "react-native-flags-typescript";
-import { Text, ModalProps } from "react-native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import { useSelector } from "react-redux";
+import Loading from "../components/Loading";
+import { Country, IReport, Summary } from "../models/ApiData";
 
 const RegionStack = createStackNavigator();
 

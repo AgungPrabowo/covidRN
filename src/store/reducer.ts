@@ -11,7 +11,10 @@ export const rootReducer = (state = initialState, action: IAction<Summary>) => {
       return { ...state, ...action.payload };
 
     case ActionsType.SetMAP:
-      return initialState
+      return { ...state, ...action.payload };
+
+    case ActionsType.SetLoading:
+      return { ...state, ...action.payload };
 
     default:
       return state;

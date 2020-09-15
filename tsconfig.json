@@ -23,6 +23,9 @@
       "@store/*": [
         "./src/store/*"
       ],
+      "@screens/*": [
+        "./src/screens/*"
+      ],
     },
   },
   "exclude": [

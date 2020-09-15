@@ -7,7 +7,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useDispatch, useSelector } from "react-redux";
 import { Summary, IReport } from "../models/ApiData";
-import Loading from "./Loading";
+import Loading from "../components/Loading";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const HomeStack = createStackNavigator();

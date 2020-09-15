@@ -1,11 +1,12 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "@components/HomeScreen";
-import RegionScreen from "@components/RegionScreen";
+import HomeScreen from "@screens/HomeScreen";
+import RegionScreen from "@screens/RegionScreen";
 import { NavigationContainer } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { store } from "@store/store";
 import { Provider } from "react-redux";
+import MapScreen from "@screens/MapScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +40,7 @@ function MyTabs() {
                 <Icon name="map" size={30} color={color} />
               ),
             }}
-            component={RegionScreen}
+            component={MapScreen}
           />
         </Tab.Navigator>
       </NavigationContainer>
